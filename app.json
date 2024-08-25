@@ -42,6 +42,12 @@
         "projectId": "a352d75d-bca1-46b7-ae2f-aa1866ff302f"
       }
     },
-    "owner": "birbo"
+    "owner": "birbo",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/a352d75d-bca1-46b7-ae2f-aa1866ff302f"
+    }
   }
 }

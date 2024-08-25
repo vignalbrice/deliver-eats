@@ -3,6 +3,7 @@ import AnimatedImage from "@/components/ui/atoms/animated/AnimatedImage";
 import AnimatedTypography from "@/components/ui/atoms/typography/AnimatedTypography";
 import Typography from "@/components/ui/atoms/typography/Typography";
 import Flex from "@/components/ui/layout/Flex/Flex";
+import { Colors } from "@/constants/Colors";
 import { StatusBar } from "react-native";
 import { StyleSheet } from "react-native";
 
@@ -32,7 +33,7 @@ export default function HomeScreen() {
           variant="h1"
           duration={1200}
           style={{
-            color: "#15BE77",
+            color: Colors.light.tint,
           }}
         >
           DeliverEats
@@ -52,6 +53,20 @@ export default function HomeScreen() {
         gap={10}
       >
         <AnimatedButtonLink
+          variant="outline"
+          style={{
+            width: "90%",
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
+          href={"builders/sandwich-builder"}
+          duration={1800}
+        >
+          <Typography variant="h3" color={Colors.light.tint}>
+            Get a Sandwich
+          </Typography>
+        </AnimatedButtonLink>
+        <AnimatedButtonLink
           variant="secondary"
           style={{
             width: "90%",
@@ -63,20 +78,6 @@ export default function HomeScreen() {
         >
           <Typography variant="h3" color="#FFFF">
             Get a Macaroni
-          </Typography>
-        </AnimatedButtonLink>
-        <AnimatedButtonLink
-          variant="outline"
-          style={{
-            width: "90%",
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-          href={"builders/sandwich-builder"}
-          duration={1800}
-        >
-          <Typography variant="h3" color="dark">
-            Get a Sandwich
           </Typography>
         </AnimatedButtonLink>
       </Flex>
