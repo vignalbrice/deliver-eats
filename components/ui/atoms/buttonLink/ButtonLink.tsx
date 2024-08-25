@@ -1,7 +1,7 @@
 import { StyleProp, StyleSheet, ViewStyle } from "react-native";
 import React, { FC, PropsWithChildren } from "react";
 import Button, { TVariant } from "../button/Button";
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 
 export type ButtonLinkProps = PropsWithChildren<{
   variant?: TVariant;
@@ -15,11 +15,15 @@ const ButtonLink: FC<ButtonLinkProps> = ({
   children,
   style,
 }) => {
+  const router = useRouter();
+
   return (
-    <Button variant={variant ?? "text"} style={style}>
-      <Link push href={href}>
-        {children}
-      </Link>
+    <Button
+      variant={variant ?? "text"}
+      style={style}
+      onPress={() => router.push(href)}
+    >
+      {children}
     </Button>
   );
 };

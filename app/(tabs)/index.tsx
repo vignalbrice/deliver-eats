@@ -1,11 +1,11 @@
 import AnimatedButtonLink from "@/components/ui/atoms/animated/AnimatedButtonLink";
-import AnimatedImage from "@/components/ui/atoms/animated/AnimatedImage";
 import AnimatedTypography from "@/components/ui/atoms/typography/AnimatedTypography";
 import Typography from "@/components/ui/atoms/typography/Typography";
 import Flex from "@/components/ui/layout/Flex/Flex";
 import { Colors } from "@/constants/Colors";
 import { StatusBar } from "react-native";
 import { StyleSheet } from "react-native";
+import AnimatedLogo from "@/components/ui/logo/AnimatedLogo";
 
 export default function HomeScreen() {
   return (
@@ -28,7 +28,7 @@ export default function HomeScreen() {
           overflow: "hidden",
         }}
       >
-        <AnimatedImage src={require("@/assets/images/logo.png")} />
+        <AnimatedLogo />
         <AnimatedTypography
           variant="h1"
           duration={1200}
@@ -73,11 +73,11 @@ export default function HomeScreen() {
             flexDirection: "row",
             justifyContent: "center",
           }}
-          href={"builders/macaroni-builder"}
+          href={"builders/macaron-builder"}
           duration={1600}
         >
           <Typography variant="h3" color="#FFFF">
-            Get a Macaroni
+            Get a Macaron
           </Typography>
         </AnimatedButtonLink>
       </Flex>

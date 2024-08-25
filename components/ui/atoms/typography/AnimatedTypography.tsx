@@ -46,7 +46,7 @@ const AnimatedTypography: FC<AnimatedTypographyProps> = ({
     <Animated.Text
       style={[
         {
-          color: color ?? Colors[colorScheme ?? "light"].text,
+          color: color ?? Colors["light"].text,
           ...transitionStyle,
           overflow: "hidden",
         },

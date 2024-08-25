@@ -1,11 +1,10 @@
 import BottomUi from "@/components/bottomUI/BottomUi";
 import { Sandwich } from "@/components/sandwich/Sandwich";
 import BackButton from "@/components/ui/atoms/backButton/BackButton";
-import Button from "@/components/ui/atoms/button/Button";
-import Ionicons from "@expo/vector-icons/Ionicons";
+
 import { Canvas } from "@react-three/fiber/native";
 import { Suspense } from "react";
-import { StatusBar, StyleSheet, Text, View } from "react-native";
+import { StatusBar, StyleSheet, View } from "react-native";
 
 export default function SandwichBuilder() {
   return (

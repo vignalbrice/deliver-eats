@@ -1,24 +1,18 @@
-import {
-  ImageSourcePropType,
-  ImageStyle,
-  StyleProp,
-  StyleSheet,
-} from "react-native";
+import { StyleProp, ViewStyle } from "react-native";
 import React, { FC, useEffect } from "react";
 import Animated, {
-  SharedValue,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
+import Logo from "./Logo";
 
-type AnimatedImageProps = {
-  src: ImageSourcePropType | SharedValue<ImageSourcePropType>;
-  style?: StyleProp<ImageStyle>;
+type AnimatedLogoProps = {
   duration?: number;
+  style?: StyleProp<ViewStyle>;
 };
 
-const AnimatedImage: FC<AnimatedImageProps> = ({ src, style, duration }) => {
+const AnimatedLogo: FC<AnimatedLogoProps> = ({ duration, style }) => {
   const scale = useSharedValue(0);
   const config = {
     duration: duration ?? 1000,
@@ -35,8 +29,7 @@ const AnimatedImage: FC<AnimatedImageProps> = ({ src, style, duration }) => {
   }, []);
 
   return (
-    <Animated.Image
-      source={src}
+    <Animated.View
       style={[
         {
           ...animatedStyle,
@@ -44,10 +37,10 @@ const AnimatedImage: FC<AnimatedImageProps> = ({ src, style, duration }) => {
         },
         style,
       ]}
-    />
+    >
+      <Logo />
+    </Animated.View>
   );
 };
 
-export default AnimatedImage;
-
-const styles = StyleSheet.create({});
+export default AnimatedLogo;

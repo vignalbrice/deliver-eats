@@ -12,7 +12,7 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarActiveTintColor: Colors["light"].tint,
         headerShown: false,
         tabBarStyle: styles.container,
         tabBarShowLabel: false,
@@ -25,6 +25,7 @@ export default function TabLayout() {
             <TabBarIcon
               name={focused ? "home" : "home-outline"}
               color={color}
+              size={24}
             />
           ),
         }}
@@ -62,9 +63,9 @@ const styles = StyleSheet.create({
     shadowColor: "#757575",
     shadowOffset: {
       width: 0,
-      height: 10,
+      height: 3,
     },
-    shadowOpacity: 0.9,
+    shadowOpacity: 0.2,
     shadowRadius: 5,
     elevation: 8,
   },

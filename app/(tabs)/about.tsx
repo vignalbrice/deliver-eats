@@ -3,10 +3,8 @@ import React from "react";
 import Flex from "@/components/ui/layout/Flex/Flex";
 import { LinearGradient } from "expo-linear-gradient";
 
-import { HelloWave } from "@/components/HelloWave";
 import Box from "@/components/ui/layout/Box/Box";
 import { Colors } from "@/constants/Colors";
-import Typography from "@/components/ui/atoms/typography/Typography";
 import AnimatedTypography from "@/components/ui/atoms/typography/AnimatedTypography";
 
 export default function About() {
@@ -23,15 +21,15 @@ export default function About() {
           }}
           source={require("@/assets/images/filter.png")}
         />
-        <LinearGradient
-          colors={["transparent", Colors[colorScheme ?? "light"].background]}
+        {/* <LinearGradient
+          colors={["transparent", "#F4F4F4"]}
           style={{
             position: "absolute",
-            bottom: -100,
+            bottom: -10,
             width: "100%",
-            height: "100%",
+            height: "80%",
           }}
-        />
+        /> */}
       </Box>
       <Flex
         direction="column"
@@ -72,7 +70,7 @@ export default function About() {
           <AnimatedTypography
             duration={1600}
             variant="p"
-            style={{ color: Colors[colorScheme ?? "light"].tint }}
+            style={{ color: Colors["light"].tint }}
           >
             delivereats@gmail.com
           </AnimatedTypography>
@@ -84,7 +82,7 @@ export default function About() {
           <AnimatedTypography
             duration={1800}
             variant="p"
-            style={{ color: Colors[colorScheme ?? "light"].tint }}
+            style={{ color: Colors["light"].tint }}
           >
             1-800-DELIVER
           </AnimatedTypography>
@@ -96,7 +94,7 @@ export default function About() {
           <AnimatedTypography
             variant="p"
             duration={2000}
-            style={{ color: Colors[colorScheme ?? "light"].tint }}
+            style={{ color: Colors["light"].tint }}
           >
             1234 DeliverEats Way
           </AnimatedTypography>
@@ -108,7 +106,7 @@ export default function About() {
           <AnimatedTypography
             duration={2200}
             variant="p"
-            style={{ color: Colors[colorScheme ?? "light"].tint }}
+            style={{ color: Colors["light"].tint }}
           >
             New York
           </AnimatedTypography>
@@ -123,7 +121,7 @@ export default function About() {
         <AnimatedTypography
           duration={2300}
           variant="span"
-          style={{ color: Colors[colorScheme ?? "light"].tint }}
+          style={{ color: Colors["light"].tint }}
         >
           Made by Vignal Brice.
         </AnimatedTypography>

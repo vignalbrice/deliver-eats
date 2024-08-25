@@ -1,4 +1,4 @@
-import { StatusBar } from "react-native";
+import { Dimensions, StatusBar } from "react-native";
 import React, { FC } from "react";
 import Button from "../button/Button";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -13,7 +13,7 @@ const BackButton: FC<BackButtonProps> = ({}) => {
     <Button
       style={{
         position: "absolute",
-        top: StatusBar.currentHeight ? StatusBar.currentHeight - 6 : 0,
+        top: Dimensions.get("screen").height * 0.05,
         left: 6,
         zIndex: 100,
       }}
